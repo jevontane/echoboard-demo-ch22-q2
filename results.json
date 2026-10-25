@@ -1,0 +1,669 @@
+{
+  "study": "st_3f0252ccab11f51c",
+  "task": "ch22-q2",
+  "planSha256": "0b36edefeeb613d505841be792ca87cb973ec0b524654eeb85b42d5cf6cffa7b",
+  "settings": {
+    "seed": 20261025,
+    "generations": 20,
+    "tau": 4,
+    "similarity": 0.5,
+    "reps": 1000,
+    "sigmas": [
+      0.3,
+      0.5,
+      0.8
+    ],
+    "Rs": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "ns": [
+      10,
+      20,
+      40,
+      80,
+      160,
+      320
+    ],
+    "alpha": 0.05
+  },
+  "hypotheses": {
+    "H1": {
+      "claim": "M1 detection n80 at R=0.10, sigma=0.5 is in 75-125",
+      "n80": 103,
+      "verdict": "supported"
+    },
+    "H2": {
+      "claim": "M1-vs-M2 discrimination n80 > M1 detection n80",
+      "n80Discrimination": 131,
+      "n80Detection": 103,
+      "verdict": "supported"
+    },
+    "H3": {
+      "claim": "M3 control-line n80 / M2 trained-line n80 is in 3-5",
+      "ratio": null,
+      "n80Control": null,
+      "n80Trained": 148,
+      "verdict": "inconclusive"
+    }
+  },
+  "outcome": "inconclusive",
+  "n80": [
+    {
+      "sigma": 0.3,
+      "R": 0.05,
+      "n80DetectM1": 152,
+      "n80DetectM2": 234,
+      "n80DetectM3Control": null,
+      "n80DiscriminateM1vsM2": 212
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.1,
+      "n80DetectM1": 36,
+      "n80DetectM2": 54,
+      "n80DetectM3Control": 241,
+      "n80DiscriminateM1vsM2": 49
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.2,
+      "n80DetectM1": 10,
+      "n80DetectM2": 12,
+      "n80DetectM3Control": 56,
+      "n80DiscriminateM1vsM2": 11
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.05,
+      "n80DetectM1": null,
+      "n80DetectM2": null,
+      "n80DetectM3Control": null,
+      "n80DiscriminateM1vsM2": null
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.1,
+      "n80DetectM1": 103,
+      "n80DetectM2": 148,
+      "n80DetectM3Control": null,
+      "n80DiscriminateM1vsM2": 131
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.2,
+      "n80DetectM1": 23,
+      "n80DetectM2": 33,
+      "n80DetectM3Control": 152,
+      "n80DiscriminateM1vsM2": 28
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.05,
+      "n80DetectM1": null,
+      "n80DetectM2": null,
+      "n80DetectM3Control": null,
+      "n80DiscriminateM1vsM2": null
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.1,
+      "n80DetectM1": 254,
+      "n80DetectM2": null,
+      "n80DetectM3Control": null,
+      "n80DiscriminateM1vsM2": null
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.2,
+      "n80DetectM1": 57,
+      "n80DetectM2": 80,
+      "n80DetectM3Control": null,
+      "n80DiscriminateM1vsM2": 91
+    }
+  ],
+  "cells": [
+    {
+      "sigma": 0.3,
+      "R": 0.05,
+      "n": 10,
+      "falsePositiveRate": 0.035,
+      "powerM1": 0.105,
+      "powerM2": 0.083,
+      "powerM3Control": 0.047,
+      "discriminationM1vsM2": 0.5545
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.05,
+      "n": 20,
+      "falsePositiveRate": 0.051,
+      "powerM1": 0.181,
+      "powerM2": 0.12,
+      "powerM3Control": 0.056,
+      "discriminationM1vsM2": 0.5675
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.05,
+      "n": 40,
+      "falsePositiveRate": 0.041,
+      "powerM1": 0.3,
+      "powerM2": 0.216,
+      "powerM3Control": 0.075,
+      "discriminationM1vsM2": 0.618
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.05,
+      "n": 80,
+      "falsePositiveRate": 0.052,
+      "powerM1": 0.536,
+      "powerM2": 0.381,
+      "powerM3Control": 0.12,
+      "discriminationM1vsM2": 0.679
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.05,
+      "n": 160,
+      "falsePositiveRate": 0.048,
+      "powerM1": 0.822,
+      "powerM2": 0.66,
+      "powerM3Control": 0.231,
+      "discriminationM1vsM2": 0.758
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.05,
+      "n": 320,
+      "falsePositiveRate": 0.049,
+      "powerM1": 0.984,
+      "powerM2": 0.915,
+      "powerM3Control": 0.401,
+      "discriminationM1vsM2": 0.861
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.1,
+      "n": 10,
+      "falsePositiveRate": 0.056,
+      "powerM1": 0.326,
+      "powerM2": 0.233,
+      "powerM3Control": 0.086,
+      "discriminationM1vsM2": 0.6315
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.1,
+      "n": 20,
+      "falsePositiveRate": 0.049,
+      "powerM1": 0.575,
+      "powerM2": 0.393,
+      "powerM3Control": 0.132,
+      "discriminationM1vsM2": 0.7005
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.1,
+      "n": 40,
+      "falsePositiveRate": 0.055,
+      "powerM1": 0.844,
+      "powerM2": 0.688,
+      "powerM3Control": 0.217,
+      "discriminationM1vsM2": 0.778
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.1,
+      "n": 80,
+      "falsePositiveRate": 0.054,
+      "powerM1": 0.992,
+      "powerM2": 0.939,
+      "powerM3Control": 0.394,
+      "discriminationM1vsM2": 0.8515
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.1,
+      "n": 160,
+      "falsePositiveRate": 0.053,
+      "powerM1": 1,
+      "powerM2": 0.998,
+      "powerM3Control": 0.645,
+      "discriminationM1vsM2": 0.93
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.1,
+      "n": 320,
+      "falsePositiveRate": 0.048,
+      "powerM1": 1,
+      "powerM2": 1,
+      "powerM3Control": 0.906,
+      "discriminationM1vsM2": 0.984
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.2,
+      "n": 10,
+      "falsePositiveRate": 0.046,
+      "powerM1": 0.879,
+      "powerM2": 0.749,
+      "powerM3Control": 0.222,
+      "discriminationM1vsM2": 0.7825
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.2,
+      "n": 20,
+      "falsePositiveRate": 0.051,
+      "powerM1": 0.996,
+      "powerM2": 0.957,
+      "powerM3Control": 0.392,
+      "discriminationM1vsM2": 0.8765
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.2,
+      "n": 40,
+      "falsePositiveRate": 0.041,
+      "powerM1": 1,
+      "powerM2": 1,
+      "powerM3Control": 0.675,
+      "discriminationM1vsM2": 0.947
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.2,
+      "n": 80,
+      "falsePositiveRate": 0.045,
+      "powerM1": 1,
+      "powerM2": 1,
+      "powerM3Control": 0.933,
+      "discriminationM1vsM2": 0.988
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.2,
+      "n": 160,
+      "falsePositiveRate": 0.059,
+      "powerM1": 1,
+      "powerM2": 1,
+      "powerM3Control": 0.997,
+      "discriminationM1vsM2": 0.9995
+    },
+    {
+      "sigma": 0.3,
+      "R": 0.2,
+      "n": 320,
+      "falsePositiveRate": 0.049,
+      "powerM1": 1,
+      "powerM2": 1,
+      "powerM3Control": 1,
+      "discriminationM1vsM2": 1
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.05,
+      "n": 10,
+      "falsePositiveRate": 0.056,
+      "powerM1": 0.078,
+      "powerM2": 0.049,
+      "powerM3Control": 0.043,
+      "discriminationM1vsM2": 0.498
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.05,
+      "n": 20,
+      "falsePositiveRate": 0.039,
+      "powerM1": 0.071,
+      "powerM2": 0.071,
+      "powerM3Control": 0.033,
+      "discriminationM1vsM2": 0.523
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.05,
+      "n": 40,
+      "falsePositiveRate": 0.049,
+      "powerM1": 0.138,
+      "powerM2": 0.091,
+      "powerM3Control": 0.041,
+      "discriminationM1vsM2": 0.5575
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.05,
+      "n": 80,
+      "falsePositiveRate": 0.038,
+      "powerM1": 0.244,
+      "powerM2": 0.195,
+      "powerM3Control": 0.068,
+      "discriminationM1vsM2": 0.5805
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.05,
+      "n": 160,
+      "falsePositiveRate": 0.041,
+      "powerM1": 0.404,
+      "powerM2": 0.29,
+      "powerM3Control": 0.105,
+      "discriminationM1vsM2": 0.6355
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.05,
+      "n": 320,
+      "falsePositiveRate": 0.058,
+      "powerM1": 0.709,
+      "powerM2": 0.489,
+      "powerM3Control": 0.141,
+      "discriminationM1vsM2": 0.7315
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.1,
+      "n": 10,
+      "falsePositiveRate": 0.041,
+      "powerM1": 0.137,
+      "powerM2": 0.104,
+      "powerM3Control": 0.053,
+      "discriminationM1vsM2": 0.56
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.1,
+      "n": 20,
+      "falsePositiveRate": 0.045,
+      "powerM1": 0.238,
+      "powerM2": 0.2,
+      "powerM3Control": 0.086,
+      "discriminationM1vsM2": 0.598
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.1,
+      "n": 40,
+      "falsePositiveRate": 0.055,
+      "powerM1": 0.437,
+      "powerM2": 0.275,
+      "powerM3Control": 0.131,
+      "discriminationM1vsM2": 0.6655
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.1,
+      "n": 80,
+      "falsePositiveRate": 0.049,
+      "powerM1": 0.714,
+      "powerM2": 0.534,
+      "powerM3Control": 0.167,
+      "discriminationM1vsM2": 0.7305
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.1,
+      "n": 160,
+      "falsePositiveRate": 0.059,
+      "powerM1": 0.946,
+      "powerM2": 0.835,
+      "powerM3Control": 0.269,
+      "discriminationM1vsM2": 0.828
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.1,
+      "n": 320,
+      "falsePositiveRate": 0.046,
+      "powerM1": 1,
+      "powerM2": 0.978,
+      "powerM3Control": 0.489,
+      "discriminationM1vsM2": 0.907
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.2,
+      "n": 10,
+      "falsePositiveRate": 0.052,
+      "powerM1": 0.488,
+      "powerM2": 0.33,
+      "powerM3Control": 0.091,
+      "discriminationM1vsM2": 0.6905
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.2,
+      "n": 20,
+      "falsePositiveRate": 0.044,
+      "powerM1": 0.752,
+      "powerM2": 0.576,
+      "powerM3Control": 0.179,
+      "discriminationM1vsM2": 0.7665
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.2,
+      "n": 40,
+      "falsePositiveRate": 0.049,
+      "powerM1": 0.965,
+      "powerM2": 0.878,
+      "powerM3Control": 0.292,
+      "discriminationM1vsM2": 0.837
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.2,
+      "n": 80,
+      "falsePositiveRate": 0.057,
+      "powerM1": 1,
+      "powerM2": 0.991,
+      "powerM3Control": 0.527,
+      "discriminationM1vsM2": 0.9215
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.2,
+      "n": 160,
+      "falsePositiveRate": 0.049,
+      "powerM1": 1,
+      "powerM2": 1,
+      "powerM3Control": 0.821,
+      "discriminationM1vsM2": 0.9705
+    },
+    {
+      "sigma": 0.5,
+      "R": 0.2,
+      "n": 320,
+      "falsePositiveRate": 0.044,
+      "powerM1": 1,
+      "powerM2": 1,
+      "powerM3Control": 0.984,
+      "discriminationM1vsM2": 0.996
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.05,
+      "n": 10,
+      "falsePositiveRate": 0.05,
+      "powerM1": 0.048,
+      "powerM2": 0.036,
+      "powerM3Control": 0.027,
+      "discriminationM1vsM2": 0.505
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.05,
+      "n": 20,
+      "falsePositiveRate": 0.047,
+      "powerM1": 0.059,
+      "powerM2": 0.052,
+      "powerM3Control": 0.043,
+      "discriminationM1vsM2": 0.5155
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.05,
+      "n": 40,
+      "falsePositiveRate": 0.05,
+      "powerM1": 0.084,
+      "powerM2": 0.057,
+      "powerM3Control": 0.034,
+      "discriminationM1vsM2": 0.5195
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.05,
+      "n": 80,
+      "falsePositiveRate": 0.035,
+      "powerM1": 0.113,
+      "powerM2": 0.109,
+      "powerM3Control": 0.037,
+      "discriminationM1vsM2": 0.543
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.05,
+      "n": 160,
+      "falsePositiveRate": 0.035,
+      "powerM1": 0.208,
+      "powerM2": 0.134,
+      "powerM3Control": 0.048,
+      "discriminationM1vsM2": 0.5725
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.05,
+      "n": 320,
+      "falsePositiveRate": 0.049,
+      "powerM1": 0.354,
+      "powerM2": 0.234,
+      "powerM3Control": 0.083,
+      "discriminationM1vsM2": 0.63
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.1,
+      "n": 10,
+      "falsePositiveRate": 0.047,
+      "powerM1": 0.068,
+      "powerM2": 0.074,
+      "powerM3Control": 0.045,
+      "discriminationM1vsM2": 0.52
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.1,
+      "n": 20,
+      "falsePositiveRate": 0.06,
+      "powerM1": 0.123,
+      "powerM2": 0.093,
+      "powerM3Control": 0.035,
+      "discriminationM1vsM2": 0.537
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.1,
+      "n": 40,
+      "falsePositiveRate": 0.059,
+      "powerM1": 0.219,
+      "powerM2": 0.148,
+      "powerM3Control": 0.063,
+      "discriminationM1vsM2": 0.5805
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.1,
+      "n": 80,
+      "falsePositiveRate": 0.067,
+      "powerM1": 0.351,
+      "powerM2": 0.253,
+      "powerM3Control": 0.093,
+      "discriminationM1vsM2": 0.651
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.1,
+      "n": 160,
+      "falsePositiveRate": 0.058,
+      "powerM1": 0.635,
+      "powerM2": 0.42,
+      "powerM3Control": 0.163,
+      "discriminationM1vsM2": 0.698
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.1,
+      "n": 320,
+      "falsePositiveRate": 0.044,
+      "powerM1": 0.883,
+      "powerM2": 0.735,
+      "powerM3Control": 0.233,
+      "discriminationM1vsM2": 0.7875
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.2,
+      "n": 10,
+      "falsePositiveRate": 0.049,
+      "powerM1": 0.204,
+      "powerM2": 0.18,
+      "powerM3Control": 0.056,
+      "discriminationM1vsM2": 0.5945
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.2,
+      "n": 20,
+      "falsePositiveRate": 0.051,
+      "powerM1": 0.4,
+      "powerM2": 0.273,
+      "powerM3Control": 0.067,
+      "discriminationM1vsM2": 0.6215
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.2,
+      "n": 40,
+      "falsePositiveRate": 0.045,
+      "powerM1": 0.679,
+      "powerM2": 0.457,
+      "powerM3Control": 0.14,
+      "discriminationM1vsM2": 0.732
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.2,
+      "n": 80,
+      "falsePositiveRate": 0.055,
+      "powerM1": 0.915,
+      "powerM2": 0.802,
+      "powerM3Control": 0.255,
+      "discriminationM1vsM2": 0.7805
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.2,
+      "n": 160,
+      "falsePositiveRate": 0.039,
+      "powerM1": 0.999,
+      "powerM2": 0.984,
+      "powerM3Control": 0.423,
+      "discriminationM1vsM2": 0.8895
+    },
+    {
+      "sigma": 0.8,
+      "R": 0.2,
+      "n": 320,
+      "falsePositiveRate": 0.054,
+      "powerM1": 1,
+      "powerM2": 1,
+      "powerM3Control": 0.724,
+      "discriminationM1vsM2": 0.9545
+    }
+  ],
+  "seconds": 47
+}
